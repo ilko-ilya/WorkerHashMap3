@@ -14,6 +14,7 @@ public class PersonExample {
         Person person3 = new Person(3, "Людмила", "Самиляк");
         Person person4 = new Person(4, "Виталий", "Ветренко");
         Person person5 = new Person(5, "Роман", "Клищ");
+        Person person6 = new Person(7, "Иван", "Петров");
 
 
         Map<Integer, Person> map = new HashMap<>();
@@ -22,6 +23,7 @@ public class PersonExample {
         map.put(person3.getId(), person3);
         map.put(person4.getId(), person4);
         map.put(person5.getId(), person5);
+        map.put(person6.getId(), person6);
 
         System.out.println(map.entrySet());
 
