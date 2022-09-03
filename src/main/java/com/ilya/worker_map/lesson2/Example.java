@@ -1,28 +1,26 @@
 package com.ilya.worker_map.lesson2;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Example {
     public static void main(String[] args) {
-        int odd = countOdd(new String[]{"Hello", "jav", "pocco"});
-        System.out.println(odd);
-    }
-    public static int countOdd(String[] arr) {
-
-        if (arr.length == 0) {
-            return 0;
-        }
-        int count = 0;
+       int[] arr = new int[10];
+        Random rnd = new Random();
         for (int i = 0; i < arr.length; i++) {
-            if (i % 2 == 0){
-                count += arr[i].length();
-            }
+            arr[i] = rnd.nextInt(101);
+            System.out.print(arr[i] + ", ");
         }
-        return count;
+        System.out.println();
 
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
+        for (int i = arr.length -1; i >= 0 ; i--) {
+            System.out.print(arr[i] + " ");
+
+        }
     }
-
-
 }
 
 

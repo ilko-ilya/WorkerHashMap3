@@ -9,22 +9,18 @@ import java.util.Random;
 public class Example4 {
 
     public static void main(String[] args) {
-        int[] arr = {66, 54, -9, 78, 33, 23, 12};
-        for (int element : arr) {
-            System.out.print(element + " ");
-        }
-        System.out.println();
+        int longest = findLongest("hello javava");
+        System.out.println(longest);
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 1; j < arr.length -i; j++) {
-                if (arr[j] < arr[j -1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j -1];
-                    arr[j -1] = temp;
-                }
+    }
+    public static int findLongest(String sentence) {
+        String[] split = sentence.split(" ");
+        int max = 0;
+        for (String element : split) {
+            if (element.length() > max){
+                max = element.length();
             }
         }
-        System.out.println(Arrays.toString(arr));
-
+        return max;
     }
 }
