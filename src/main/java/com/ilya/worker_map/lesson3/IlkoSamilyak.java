@@ -1,23 +1,25 @@
 package com.ilya.worker_map.lesson3;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class IlkoSamilyak {
     public static void main(String[] args) {
-        int[] arr = getArr(new int[]{1, 2, 3}, new int[]{4, 5, 6});
-        System.out.println(Arrays.toString(arr));
+
+        int[] arr = new int[10];
+        Random rnd = new Random();
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rnd.nextInt(101);
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        for (int i = arr.length -1;i >= 0 ; i--) {
+            System.out.print(arr[i] + " ");
+
+        }
 
     }
-    public static int[] getArr(int[] first,int[] second){
-        int[] newArr = new int[first.length + second.length];
-        int count = 0;
 
-        for (int i = 0; i < first.length; i++) {
-            newArr[count++] = first[i];
-        }
-        for (int i = 0; i < second.length; i++) {
-            newArr[count++] = second[i];
-        }
-        return newArr;
-    }
 }
